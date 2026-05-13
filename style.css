@@ -1,10 +1,50 @@
-.navnav{
-    background-color: #333;
+/* centrer tout */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0ea5e9, #9333ea);
     color: white;
-    padding: 10px;
+    text-align: center;
 }
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: rgb(229, 28, 28);
+
+/* box */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
 }
+
+/* boutons */
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* couleurs */
+.facebook {
+    background: #1877f2;
+}
+
+.instagram {
+    background: #e1306c;
+}
+
+/* animation */
+.btn:hover {
+    transform: scale(1.1);
+}g
