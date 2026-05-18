@@ -1,31 +1,44 @@
-console.log("Script loaded successfully!");
-const btn = document.getElementById("btn");
-const nom = document.getElementById("name");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
+console.log("Hello, World!");
+// alert("Welcome to the site!");
 
-console.log(btn);
-console.log(nom);
-console.log(email);
-console.log(password);
-btn.addEventListener("click", function() {
-    if (nom.value === "" || email.value === "" || password.value === "") {
+const name = document.getElementById("nom");
+const password = document.getElementById("password");
+const email = document.getElementById("email");
+const btnSend = document.getElementById("btnSend");
+
+
+btnSend.addEventListener("click", function() {
+
+    if (name.value === "" || password.value === "" || email.value === "") {
         alert("Please fill in all fields.");
-        return;
-    }
-    if (!email.value.includes("@")) {
-        alert("Please enter a valid email address.");
-        return;
-    }
-    if (password.value.length < 6) {
-        alert("Password must be at least 6 characters long.");
-        return;
-    }
     
-    event.preventDefault();
-    console.log("Button clicked!");
-    console.log( nom.value);
-    console.log(email.value);
-    console.log(password.value);
-    alert("bonne inscription");
+       
+    }
+     else if (!email.value.includes("@")) {
+            alert("Please enter a valid email address.");
+        }
+         else {
+        alert(name.value + " " + password.value + " " + email.value);
+    }
+});
+
+
+const formInscription = document.getElementById("formSignup");
+
+const signupbutton = document.getElementById("signupbtn");
+
+signupbutton.addEventListener("click", function() {
+    formInscription.style.display = "flex";
+        formConnexion.style.display = "none";
+
+});
+
+const formConnexion = document.getElementById("formSignIn");
+
+const loginbutton = document.getElementById("signinbtn");
+
+loginbutton.addEventListener("click", function() {
+    formConnexion.style.display = "flex";
+        formInscription.style.display = "none";
+
 });
